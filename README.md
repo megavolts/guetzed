@@ -1,5 +1,5 @@
 # Introduction
-guetzlingPy is a python wrapper for guetzli. [Guetzli](https://github.com/google/guetzli) is a Google alogrithm to optimize JPEG and PNG images, processing one file at a time. GuetzlingPy automate the compression of JPEGs and PNGs found recursively. By default GuetlyingPy keep a copy of the original files an process both JPEGs and PNGs within a given folder.
+guetzlingPy is a python wrapper for guetzli. [Guetzli](https://github.com/google/guetzli) is a Google alogrithm to optimize JPEG and PNG images, processing one file at a time. GuetzlingPy automate the compression of JPEGs and PNGs found recursively. By default guetzlingPy keep a copy of the original files an process both JPEGs and PNGs within a given folder.
 
 By default, guetzlingPy keeps a copy of the original files, appending the `.bkp` extension to the filename. The scripts operates either in the directory where it is executed.
 
@@ -13,10 +13,14 @@ guetzlingPy.py [-h] [-i INPUT] [-o OUTPUT] [-q QUALITY] [-j] [-p] [-d] [-v]
 ### Parameters ###
 By default, guetzlingPy uses the followign options:
 - execution folder is where the script is exectued
+
 - output folder is identical as original image folder
+
 - JPGs are compressed, backup copies of the original are kept 
+
 - PNGs are converted to JPGs, then compressed, the originals are ketp
-- Quality level is set to 90
+
+- quality level is set to 90
 
 ### Flag ###
 -h, --help                    show this help message and exit
