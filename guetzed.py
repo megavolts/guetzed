@@ -9,7 +9,7 @@ from subprocess import call
 
 
 parser = argparse.ArgumentParser(
-    description="""GuetzlingPy is a python wrapper for guetyli. Guetlzi is a Google alogrithm to optimize JPEG and PNG images, processing one file at a time. GuetzlingPy automate the compression of JPEGs and PNGs found recursively. By default GuetlyingPy keep a copy of the original files an process both JPEGs and PNGs within a given folder.""")
+    description="""guetzed is a python wrapper for guetyli. Guetlzi is a Google alogrithm to optimize JPEG and PNG images, processing one file at a time. guetzed automates the compression of JPEGs and PNGs found recursively. By default guetzed keep a copy of the original files an process both JPEGs and PNGs within a given folder.""")
 parser.add_argument('-i', '--input',
     required=False,
     type=str,
@@ -71,8 +71,6 @@ def run():
                 filepath = path.join(dirpath, name)
                 # Check type
                 if what(filepath) in TYPES:
-                    print("%s" % name)
-                    print("\tinput: %s" % filepath)
                     # Get filepaths
                     filepath_temp = path.join(dirpath, "temp.jpg")
 
@@ -105,7 +103,6 @@ def run():
                             while path.exists(filepath_out):
                                 filepath_out = path.join(args.output, '.'.join(name.split('.')[:-1])+'-'+str(ii)+'.jpg')
                                 ii = ii+1
-                        print("\toutput: %s" % filepath_out)
                         if args.verbosity > 0:
                             print("%s \t compress ratio: %.0f" %(filepath, compress_ratio))
                         copy2(filepath_temp, filepath_out)
